@@ -18,6 +18,20 @@ public class LinkedList {
 		numberOfObjects++;
 	}
 	
+	public void printLinkedList()
+	{
+		Cell atual = primeira;
+		
+		while (atual != null) {
+			 System.out.println(atual.getData());
+			 
+			 atual = atual.getProx();
+			
+		}
+		
+		
+	}
+	
 	
 
 }
