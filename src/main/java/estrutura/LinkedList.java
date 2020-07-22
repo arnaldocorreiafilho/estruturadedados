@@ -7,7 +7,7 @@ public class LinkedList {
 	private Cell ultima;
 	private int numberOfObjects = 0;
 	
-	public void add(int data)
+	public void addInBegin(int data)
 	{
 		Cell nova = new Cell(data, primeira);;
 		primeira = nova;
@@ -16,6 +16,17 @@ public class LinkedList {
 			this.ultima = primeira;
 		}
 		numberOfObjects++;
+	}
+	
+	
+	public void add(int data) {
+		if(numberOfObjects == 0)
+			this.addInBegin(data);
+		else {
+			Cell nova = new Cell(data);
+			ultima.setProx(nova);
+			ultima = nova;
+		}
 	}
 	
 	public void printLinkedList()

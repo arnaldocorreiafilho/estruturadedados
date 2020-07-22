@@ -6,6 +6,14 @@ public class Cell {
 	private Cell prox;
 	
 	
+	public Cell(int data) {
+		super();
+		this.data = data;
+	}
+
+
+
+
 	public Cell(int data, Cell prox) {
 		super();
 		this.data = data;
