@@ -1,5 +1,7 @@
 package estrutura;
 
+
+
 public class LinkedList {
 	
 	
@@ -43,6 +45,70 @@ public class LinkedList {
 		
 	}
 	
+	
+	private Boolean ocupiedPosition(int pos)
+	{
+		return pos >= 0 && pos < numberOfObjects;
+	}
+	
+	
+	public Cell getByPosition(int pos)
+	{
+		if(!this.ocupiedPosition(pos)){
+			throw new IllegalArgumentException("Posição não existe");
+			}
+		int i = 0;
+		Cell atual = primeira;
+		while(i < pos)
+		{
+			atual = atual.getProx();
+			i++;
+		}
+		return atual;
+	}
+	
+	
+	public void addPos(int pos , int data)
+	{
+		if(pos == 0)
+		{
+			addInBegin(data);
+		}
+		if(pos==numberOfObjects)
+		{
+			add(data);
+		}
+		else {
+			
+			Cell anterior = getByPosition(pos-1);
+			Cell nova = new Cell(data, anterior.getProx());
+			anterior.setProx(nova);
+			this.numberOfObjects++;
+		}
+	}
+	
+	public int getElement(int pos)
+	{
+		return getByPosition(pos).getData();
+	}
+	
+	public Boolean existElement(int i) {
+		Cell atual = primeira;
+		
+		while (atual != null) {
+			
+			if(atual.getData() == i)
+				return true;
+			atual = atual.getProx();
+		}
+		
+		return false;
+	}
+	
+	public int getTamanho()
+	{
+		return numberOfObjects;
+	}
 	
 
 }
