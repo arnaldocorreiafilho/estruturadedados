@@ -11,8 +11,12 @@ public class MyApp {
 	//System.out.println(l.getElement(1));
 	l.addPos(1,200);
 	l.printLinkedList();
-	System.out.println(l.existElement(200));
-	System.out.println(l.getTamanho());
+	System.out.println();
+	l.removerUltima(3);
+	l.printLinkedList();
+
+	
+	
 
 	}
 

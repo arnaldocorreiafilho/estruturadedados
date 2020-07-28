@@ -110,5 +110,44 @@ public class LinkedList {
 		return numberOfObjects;
 	}
 	
+	public void removeDoComeco() {
+		if(!this.ocupiedPosition(0)){
+			throw new IllegalArgumentException("Posição não existe");
+			}
+		
+		this.primeira = this.primeira.getProx();
+		this.numberOfObjects--;
+		
+		if(numberOfObjects == 0)
+			ultima = null;
+	}
+	
+	public void removerUltima(int pos) {
+		if(!this.ocupiedPosition(pos)){
+			throw new IllegalArgumentException("Posição não existe");
+			}
+		Cell anterior;
+		if(pos == 0)
+		{
+			this.removeDoComeco();
+			//System.out.println("passou");
+		}
+			
+		
+		else {
+			anterior = getByPosition(pos-1);		
+			
+			Cell atual = anterior.getProx();
+			Cell prox = atual.getProx();
+			anterior.setProx(prox);
+			if(pos == numberOfObjects-1) {
+				ultima = anterior;
+			}
+			numberOfObjects--;
+			
+			
+		}
+	}
+	
 
 }
