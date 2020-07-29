@@ -12,7 +12,7 @@ public class MyApp {
 	l.addPos(1,200);
 	l.printLinkedList();
 	System.out.println();
-	l.removerUltima(3);
+	l.removerUltima();
 	l.printLinkedList();
 
 	

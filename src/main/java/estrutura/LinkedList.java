@@ -149,5 +149,24 @@ public class LinkedList {
 		}
 	}
 	
+	public Cell getAnterior()
+	{
+		Cell anterior = primeira;
+		while (anterior.getProx().getProx() != null) {
+			
+			anterior = anterior.getProx();
+		}
+		return anterior;
+	}
+	public void removerUltima() {	
+		
+		
+		
+		Cell anterior = getAnterior();
+		anterior.setProx(null);
+		this.ultima = anterior;
+		this.numberOfObjects--;
+	}
+	
 
 }
