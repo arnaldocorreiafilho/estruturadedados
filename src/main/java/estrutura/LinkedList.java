@@ -135,14 +135,8 @@ public class LinkedList {
 			
 		
 		else {
-			anterior = getByPosition(pos-1);		
-			
-			Cell atual = anterior.getProx();
-			Cell prox = atual.getProx();
-			anterior.setProx(prox);
-			if(pos == numberOfObjects-1) {
-				ultima = anterior;
-			}
+			anterior = getByPosition(pos-1);			
+			anterior.setProx(anterior.getProx().getProx());		
 			numberOfObjects--;
 			
 			
