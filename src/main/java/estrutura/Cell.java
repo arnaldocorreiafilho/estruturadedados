@@ -4,6 +4,7 @@ public class Cell {
 	
 	private int data;
 	private Cell prox;
+	private Cell anterior;
 	
 	
 	public Cell(int data) {
@@ -36,6 +37,20 @@ public class Cell {
 	}
 	public void setData(int data) {
 		this.data = data;
+	}
+
+
+
+
+	public Cell getAnterior() {
+		return anterior;
+	}
+
+
+
+
+	public void setAnterior(Cell anterior) {
+		this.anterior = anterior;
 	}
 
 }

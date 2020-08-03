@@ -14,8 +14,14 @@ public class MyApp {
 	System.out.println();
 	l.removerUltima();
 	l.printLinkedList();
-
-	
+	System.out.println();
+	DoubleList db = new DoubleList();
+	db.addComeco(12);
+	db.addComeco(13);
+	db.adiciona(14);
+	db.addComeco(13);
+	db.adiciona(2,130);
+	db.print();
 	
 
 	}
