@@ -28,6 +28,13 @@ public class MyApp {
 	db.print();
 	
 	
+	System.out.println("Pilha");
+	Pilha p = new Pilha();
+	p.inserir(10);
+	System.out.println(p.pop());
+	System.out.println(p.vazia());
+	
+	
 
 	}
 
