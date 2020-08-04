@@ -16,12 +16,17 @@ public class MyApp {
 	l.printLinkedList();
 	System.out.println();
 	DoubleList db = new DoubleList();
-	db.addComeco(12);
-	db.addComeco(13);
+	db.adiciona(12);
+	db.adiciona(13);
 	db.adiciona(14);
-	db.addComeco(13);
-	db.adiciona(2,130);
+	db.adiciona(13);
+	db.adiciona(1,130);
 	db.print();
+	
+	System.out.println();
+	db.remove(1);
+	db.print();
+	
 	
 
 	}

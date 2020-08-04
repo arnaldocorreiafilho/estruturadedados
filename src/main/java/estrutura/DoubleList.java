@@ -84,8 +84,47 @@ public class DoubleList {
 		  nova.setAnterior(anterior);
 		  anterior.setProx(nova);
 		  atual.setAnterior(nova);
+		  n++;
 		  
 		}
+	}
+	
+	public void removeinicio()
+	{
+		primeria = primeria.getProx();
+		n--;
+		if(n==0)
+			ultima=null;
+	}
+
+	public void removefinal() {
+		ultima = ultima.getAnterior();
+		ultima.setProx(null);
+		n--;
+		if(n==0)
+		  ultima=null;
+		
+	}
+	
+	
+	public void remove(int pos)
+	{
+		if(!this.posicaoOcupada(pos)){
+			throw new IllegalArgumentException("Posição não existe");
+			}
+		if(pos == 0)
+			removeinicio();
+		if(pos == n-1)
+			removefinal();
+		else {
+					Cell anterior = getPosicao(pos-1);
+					Cell proxCell = anterior.getProx();
+					Cell atual = proxCell.getProx();
+					atual.setAnterior(anterior);
+					anterior.setProx(atual);
+					n--;
+		}
+		
 	}
 	
 }
