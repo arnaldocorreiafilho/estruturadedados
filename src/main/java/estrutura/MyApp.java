@@ -34,6 +34,10 @@ public class MyApp {
 	System.out.println(p.pop());
 	System.out.println(p.vazia());
 	
+	System.out.println();
+	String a =  "arnaldo";
+	String b  = "zobo";
+	
 	
 
 	}
